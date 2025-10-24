@@ -304,7 +304,7 @@ export function HoneypotManager() {
         <TabsContent value="compare" className="space-y-4">
           <Card>
             <CardHeader>
-              <CardTitle>Feature Comparison</CardTitle>
+              <CardTitle>Feature & Price Comparison</CardTitle>
               <CardDescription>Compare all features across our subscription plans</CardDescription>
             </CardHeader>
             <CardContent>
