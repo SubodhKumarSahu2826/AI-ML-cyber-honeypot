@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Cyber Honeypot Platform Design System - All colors MUST be HSL */
+
+@layer base {
+  :root {
+    /* Core cyber theme colors - DARK MODE */
+    --background: 220 20% 5%;
+    --foreground: 210 100% 95%;
+
+    --card: 220 20% 8%;
+    --card-foreground: 210 100% 95%;
+
+    --popover: 220 20% 8%;
+    --popover-foreground: 210 100% 95%;
+
+    /* Electric blue primary */
+    --primary: 195 100% 50%;
+    --primary-foreground: 220 20% 5%;
+
+    /* Cyber green secondary */
+    --secondary: 150 100% 55%;
+    --secondary-foreground: 220 20% 5%;
+
+    --muted: 220 15% 15%;
+    --muted-foreground: 210 20% 65%;
+
+    /* Neon accent */
+    --accent: 270 100% 70%;
+    --accent-foreground: 220 20% 5%;
+
+    /* Threat red */
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 210 100% 95%;
+
+    /* Cyber borders and inputs */
+    --border: 195 100% 20%;
+    --input: 220 15% 15%;
+    --ring: 195 100% 50%;
+
+    /* Gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(195 100% 25%), hsl(270 100% 25%));
+    --gradient-threat: linear-gradient(135deg, hsl(0 85% 30%), hsl(15 85% 35%));
+    --gradient-success: linear-gradient(135deg, hsl(150 80% 30%), hsl(120 80% 35%));
+    --gradient-glass: linear-gradient(135deg, hsl(220 20% 10% / 0.8), hsl(195 100% 20% / 0.3));
+
+    /* Shadows and glows */
+    --shadow-cyber: 0 0 20px hsl(195 100% 50% / 0.3);
+    --shadow-threat: 0 0 20px hsl(0 85% 60% / 0.3);
+    --shadow-success: 0 0 20px hsl(150 100% 55% / 0.3);
+    --glow-pulse: 0 0 40px hsl(195 100% 50% / 0.5);
+
+    --radius: 0.75rem;
+
+    /* Sidebar for admin panel */
+    --sidebar-background: 220 20% 6%;
+    --sidebar-foreground: 210 100% 90%;
+    --sidebar-primary: 195 100% 50%;
+    --sidebar-primary-foreground: 220 20% 5%;
+    --sidebar-accent: 220 15% 12%;
+    --sidebar-accent-foreground: 210 100% 90%;
+    --sidebar-border: 195 100% 20%;
+    --sidebar-ring: 195 100% 50%;
+
+    /* Warning states */
+    --warning: 45 100% 55%;
+    --warning-foreground: 220 20% 5%;
+
+    /* Info states */
+    --info: 200 100% 60%;
+    --info-foreground: 220 20% 5%;
+  }
+
+  .light {
+    /* Light mode colors - Vibrant and Dark */
+    --background: 210 30% 96%;
+    --foreground: 220 25% 15%;
+
+    --card: 0 0% 98%;
+    --card-foreground: 220 25% 15%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 220 25% 15%;
+
+    /* Vibrant electric blue */
+    --primary: 195 100% 35%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Vibrant emerald green */
+    --secondary: 150 80% 35%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 210 30% 90%;
+    --muted-foreground: 220 20% 35%;
+
+    /* Vibrant purple accent */
+    --accent: 270 75% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Bold destructive red */
+    --destructive: 0 85% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214.3 25% 80%;
+    --input: 214.3 25% 88%;
+    --ring: 195 100% 35%;
+
+    /* Vibrant light mode gradients */
+    --gradient-cyber: linear-gradient(135deg, hsl(195 100% 40%), hsl(270 100% 50%));
+    --gradient-threat: linear-gradient(135deg, hsl(0 85% 55%), hsl(15 85% 60%));
+    --gradient-success: linear-gradient(135deg, hsl(150 80% 45%), hsl(120 80% 50%));
+    --gradient-glass: linear-gradient(135deg, hsl(210 30% 98% / 0.85), hsl(195 50% 95% / 0.7));
+
+    /* Enhanced light mode shadows */
+    --shadow-cyber: 0 2px 20px hsl(195 100% 40% / 0.25);
+    --shadow-threat: 0 2px 20px hsl(0 85% 55% / 0.25);
+    --shadow-success: 0 2px 20px hsl(150 80% 45% / 0.25);
+    --glow-pulse: 0 0 35px hsl(195 100% 40% / 0.35);
+
+    /* Sidebar light mode - darker */
+    --sidebar-background: 210 25% 94%;
+    --sidebar-foreground: 220 25% 15%;
+    --sidebar-primary: 195 100% 35%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 25% 88%;
+    --sidebar-accent-foreground: 220 25% 15%;
+    --sidebar-border: 214.3 25% 80%;
+    --sidebar-ring: 195 100% 35%;
+
+    /* Bold warning yellow */
+    --warning: 45 95% 45%;
+    --warning-foreground: 0 0% 100%;
+
+    /* Vibrant info blue */
+    --info: 200 100% 40%;
+    --info-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono;
+    background-image: 
+      radial-gradient(circle at 20% 20%, hsl(195 100% 5% / 0.3) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, hsl(270 100% 5% / 0.3) 0%, transparent 50%);
+  }
+
+  /* Cyber animations */
+  @keyframes cyber-pulse {
+    0%, 100% { 
+      box-shadow: var(--shadow-cyber);
+      opacity: 1;
+    }
+    50% { 
+      box-shadow: var(--glow-pulse);
+      opacity: 0.8;
+    }
+  }
+
+  @keyframes data-stream {
+    0% { transform: translateX(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateX(100%); opacity: 0; }
+  }
+
+  @keyframes threat-blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0.3; }
+  }
+
+  /* Utility classes */
+  .cyber-pulse {
+    animation: cyber-pulse 2s ease-in-out infinite;
+  }
+
+  .data-stream {
+    animation: data-stream 3s linear infinite;
+  }
+
+  .threat-blink {
+    animation: threat-blink 1s ease-in-out infinite;
+  }
+
+  .glass-effect {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+}
