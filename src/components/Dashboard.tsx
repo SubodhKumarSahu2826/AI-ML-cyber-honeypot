@@ -76,7 +76,7 @@ export function Dashboard() {
         protocol: 'SSH',
         severity: 'high',
         classification: 'Credential Brute Force',
-        confidence: 0.94
+        confidence: 0.92
       },
       {
         id: '2',
@@ -92,7 +92,7 @@ export function Dashboard() {
         id: '3',
         timestamp: new Date(Date.now() - 60000).toISOString(),
         sourceIp: '172.16.0.25',
-        country: 'USA',
+        country: 'Australia',
         protocol: 'SSH',
         severity: 'critical',
         classification: 'Advanced Persistent Threat',
